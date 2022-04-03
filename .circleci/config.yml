@@ -13,13 +13,15 @@ jobs:
       - node/install
       - checkout
       # install dependencies in both apps
+      - run:                  
+          name: hello
+          command: |
+            echo "hello-world"
       - run:
           name: Install Front End Dependencies
           command: |
             npm run install_frontend
+      - run:          
           name: Install API Dependencies
           command: |
             npm run install_api
-          name: hello
-          command: |
-            echo "hello-world"
