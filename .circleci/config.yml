@@ -13,10 +13,6 @@ jobs:
       - node/install
       - checkout
       # install dependencies in both apps
-      - run:                  
-          name: hello
-          command: |
-            echo "hello-world"
       - run:
           name: Install Front End Dependencies
           command: |
@@ -25,3 +21,18 @@ jobs:
           name: Install API Dependencies
           command: |
             npm run install_api
+      #Conduct Continuous Integration Testing
+      - run:          
+          name: Execute Front End Unit Tests and e2e Tests
+          command: |
+            npm run test_frontend
+      #Conduct Continuous Integration Build
+      - run:          
+          name: Build Front End
+          command: |
+            npm run build_frontend
+      - run:          
+          name: Build the API
+          command: |
+            npm run build_api
+        
