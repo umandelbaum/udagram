@@ -37,6 +37,8 @@ jobs:
       - run:
           name: Deploy the code to AWS
           command: |
-            eb deploy Udagram2
+            eb init
+            eb create Udagram3
+            eb deploy Udagram3
             eb status
         
