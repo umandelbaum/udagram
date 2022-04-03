@@ -24,11 +24,11 @@ jobs:
           command: |
             npm run install_api
       #Conduct Continuous Integration Testing
-      - run:          
-          name: Execute Front End Unit Tests and e2e Tests
-          command: |
-            echo 'export NODE_OPTIONS=--openssl-legacy-provider'
-            npm run test_frontend
+      #- run:          
+      #    name: Execute Front End Unit Tests and e2e Tests
+      #    command: |
+      #      echo 'export NODE_OPTIONS=--openssl-legacy-provider'
+      #      npm run test_frontend
       #Conduct Continuous Integration Build
       - run:          
           name: Build Front End
