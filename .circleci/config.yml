@@ -10,6 +10,7 @@ jobs:
     steps:
       - node/install
       - checkout
+      - eb/setup
       - run:
           name: Set up udagram required environment variable
           command: |
@@ -33,7 +34,6 @@ jobs:
           command: |
             npm run build_api
       #Deploy to AWS
-      -eb/setup
       - run:
           name: Deploy the code to AWS
           command: |
