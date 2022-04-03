@@ -7,5 +7,15 @@
         "build_frontend": "cd udagram-frontend && npm run build",
         "build_api": "cd udagram-api && npm run build"
     },
+    "dependencies": {
+        "ejs": "latest",
+        "aws-sdk": "latest",
+        "express": "latest",
+        "body-parser": "latest"
+    },
+    "engines" : { 
+        "npm" : ">=7.0.0",
+        "node" : ">=16.0.0"
+    },
     "devDependencies": {}
 }
