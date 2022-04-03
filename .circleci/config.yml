@@ -27,7 +27,7 @@ jobs:
       - run:          
           name: Execute Front End Unit Tests and e2e Tests
           command: |
-            export NODE_OPTIONS=--openssl-legacy-provider
+            echo 'export NODE_OPTIONS=--openssl-legacy-provider'
             npm run test_frontend
       #Conduct Continuous Integration Build
       - run:          
